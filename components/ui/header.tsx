@@ -57,6 +57,14 @@ export default function Header() {
                   Testimonials
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/faq"
+                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 px-5 py-2 flex items-center transition duration-150 ease-in-out"
+                >
+                  FAQ
+                </Link>
+              </li>
               {/* 1st level: hover */}
               <Dropdown title="Resources">
                 {/* 2nd level: hover */}

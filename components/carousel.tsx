@@ -113,7 +113,7 @@ export default function Carousel() {
 
         {/* Arrows */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between mt-12 md:mt-16">
+          <div className="flex justify-end gap-2 mt-12 md:mt-16">
             <button className="carousel-prev relative z-20 w-12 h-12 p-1 box-content flex items-center justify-center group bg-teal-500 hover:bg-teal-400 dark:bg-gray-800 dark:hover:bg-teal-500/25 shadow-xl transition duration-150 ease-in-out">
               <span className="sr-only">Previous</span>
               <svg className="w-4 h-4 fill-current text-white dark:text-gray-400 group-hover:text-white dark:group-hover:text-teal-500 transition duration-150 ease-in-out" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">

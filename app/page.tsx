@@ -23,8 +23,9 @@ export default function Home() {
       </div>
       <Hero />
       <Stats />
-      <Carousel />
       <Tabs />
+      <Carousel />
+   
       <Process />
       <PricingTables />
       <TestimonialsBlocks />
