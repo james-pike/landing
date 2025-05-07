@@ -76,8 +76,7 @@ export const metadata = {
                 ))}
               </div>
             </div>
-        <FeaturesAnimation />
-        <Team />
+    
         <CtaContact />
       </>
     )
