@@ -63,7 +63,7 @@ export const metadata = {
       <>
         <Hero />
         <div className="max-w-3xl mx-auto">
-              <div className="space-y-1 px-4">
+              <div className="space-y-1 px-4 pb-6">
                 {faqs.map((faq, index) => (
                   <Accordion
                     key={index}
