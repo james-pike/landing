@@ -2,7 +2,10 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import VideoThumb from '@/public/images/video-thumb.jpg'
+import PlayImage from '@/public/images/play.jpeg'
+import WalkImage from '@/public/images/walk.jpeg'
+import WriteImage from '@/public/images/write.jpeg'
+import SingImage from '@/public/images/sing.jpeg'
 
 export default function Tabs() {
 
@@ -11,61 +14,85 @@ export default function Tabs() {
   const tabs = [
     {
       id: 'design',
-      name: 'Design',
-      description: 'Creating beautiful, intuitive interfaces that delight your customers.',
+      name: 'Play',
+      description: 'Expressive arts includes all creative modalities that you can think of : visual arts, clay, music, gingerbread, sand play, pipe cleaners, fabric or yarn, storytelling, drama, movement, etc.',
+      image: PlayImage,
       icon: (
         <svg className="w-6 h-6 shrink-0 mr-3" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path className={`fill-current ${category === 'design' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M15.4.6c-.84-.8-2.16-.8-3 0L8.7 4.3c.73.252 1.388.68 1.916 1.244.469.515.83 1.119 1.065 1.775L15.4 3.6c.8-.84.8-2.16 0-3zM4.937 6.9c-1.2 1.2-1.4 5.7-1.4 5.7s4.4-.4 5.6-1.5a2.987 2.987 0 000-4.2 2.9 2.9 0 00-4.2 0z" />
         </svg>
       ),
       content: {
-        title: 'Beautiful User Interfaces',
-        description: 'Our design process focuses on creating intuitive and visually appealing interfaces that enhance user experience.',
+        title: 'Expressive Arts',
+        description: 'Expressive arts includes all creative modalities that you can think of : visual arts, clay, music, gingerbread, sand play, pipe cleaners, fabric or yarn, storytelling, drama, movement, etc.',
         listItems: [
-          'User Interface Design',
-          'User Experience Design', 
-          'Responsive Web Design',
-          'Mobile App Design'
+          'Visual Arts',
+          'Music & Movement',
+          'Storytelling & Drama',
+          'Creative Play'
         ]
       }
     },
     {
       id: 'development',
-      name: 'Development', 
-      description: 'Building robust, scalable applications with modern technologies.',
+      name: 'Walk', 
+      description: 'A labyrinth is a single winding path used to guild walking meditation, as it leads you from the outer edge to the centre on a circuitous path.',
+      image: WalkImage,
       icon: (
         <svg className="w-6 h-6 shrink-0 mr-3" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path className={`fill-current ${category === 'development' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M5 16H4a4 4 0 01-4-4v-1h2v1a2 2 0 002 2h1v2zM13 10h-1.686l-1.207-1.207L14.37 4.63a2.121 2.121 0 00-3-3L7.207 5.793 5.99 4.576 5.98 3.02 3.038.079 0 3.117 3 6h1.586l1.207 1.207L4 9l3 3 1.793-1.793L10 11.414V13l3.01 3.01 2.98-2.979L13 10z" />
         </svg>
       ),
       content: {
-        title: 'Robust Development Solutions',
-        description: 'We build scalable, high-performance applications using modern technologies and best practices.',
+        title: 'Walking Meditation',
+        description: 'A labyrinth is a single winding path used to guild walking meditation, as it leads you from the outer edge to the centre on a circuitous path.',
         listItems: [
-          'Full-stack Development',
-          'Mobile App Development',
-          'API Development', 
-          'Cloud Solutions'
+          'Guided Walking',
+          'Meditation Practice',
+          'Mindful Movement',
+          'Centering Exercises'
         ]
       }
     },
     {
       id: 'branding',
-      name: 'Branding',
-      description: 'Establishing memorable brand identities that resonate with your audience.',
+      name: 'Write',
+      description: 'A labyrinth is a single winding path used to guild walking meditation, as it leads you from the outer edge to the centre on a circuitous path.',
+      image: WriteImage,
       icon: (
         <svg className="w-6 h-6 shrink-0 mr-3" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
           <path className={`fill-current ${category === 'branding' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M6 0H1a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V1a1 1 0 00-1-1zM5 5H2V2h3v3zM15 9h-5a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-5a1 1 0 00-1-1zm-1 5h-3v-3h3v3z" />
         </svg>
       ),
       content: {
-        title: 'Strategic Brand Identity',
-        description: 'We help businesses establish a strong brand presence through comprehensive branding solutions.',
+        title: 'Writing Meditation',
+        description: 'A labyrinth is a single winding path used to guild walking meditation, as it leads you from the outer edge to the centre on a circuitous path.',
         listItems: [
-          'Logo Design',
-          'Brand Guidelines',
-          'Visual Identity',
-          'Brand Strategy'
+          'Guided Writing',
+          'Meditation Practice',
+          'Mindful Expression',
+          'Centering Exercises'
+        ]
+      }
+    },
+    {
+      id: 'singing',
+      name: 'Sing',
+      description: 'Express yourself through music and vocal performance.',
+      image: SingImage,
+      icon: (
+        <svg className="w-6 h-6 shrink-0 mr-3" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path className={`fill-current ${category === 'singing' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm1-6.4V3h-2v6l4 2.4L12 9l-3-1.4z" />
+        </svg>
+      ),
+      content: {
+        title: 'Vocal Performance & Training',
+        description: 'Develop your singing skills with professional guidance and comprehensive vocal training programs.',
+        listItems: [
+          'Vocal Technique',
+          'Music Theory',
+          'Performance Skills',
+          'Recording Sessions'
         ]
       }
     }
@@ -81,8 +108,8 @@ export default function Tabs() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h2 className="h2 font-red-hat-display mb-4">Turn your ideas into reality in seconds</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+            <h2 className="h2 font-red-hat-display mb-4">My Creative Work</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400"> I work within four main modalities : labyrinth/walking meditation, expressive arts & play, singing and writing. </p>
           </div>
 
           {/* Section content */}
@@ -112,8 +139,17 @@ export default function Tabs() {
             <div className="lg:w-2/3">
               {tabs.map(tab => (
                 <div key={tab.id} className={category === tab.id ? 'block' : 'hidden'}>
-                  <div className="bg-white dark:bg-gray-800 rounded-lg p-6">
-                    <Image className="w-full h-60 rounded-lg mb-6" src={VideoThumb} width={700} height={150} alt={`${tab.name} services`} />
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-0 px-4">
+                    <div className="relative w-full h-40 mb-6">
+                      <Image 
+                        className="rounded-lg object-cover" 
+                        src={tab.image} 
+                        fill
+                        style={{objectPosition: 'center'}}
+                        alt={`${tab.name} services`}
+                        priority={category === tab.id}
+                      />
+                    </div>
                     <h3 className="text-2xl font-semibold mb-4 dark:text-white">{tab.content.title}</h3>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">{tab.content.description}</p>
                     <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">

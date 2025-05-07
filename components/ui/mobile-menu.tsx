@@ -12,6 +12,18 @@ export default function MobileMenu() {
   const trigger = useRef<HTMLButtonElement>(null)
   const mobileNav = useRef<HTMLDivElement>(null)
 
+  const navLinks = [
+    { href: '/about', label: 'About' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/testimonials', label: 'Testimonials' }
+  ]
+
+  const resourceLinks = [
+    { href: '/help', label: 'Help center' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/404', label: '404' }
+  ]
+
   // close the mobile menu on click outside
   useEffect(() => {
     const clickHandler = ({ target }: { target: EventTarget | null }): void => {
@@ -74,54 +86,31 @@ export default function MobileMenu() {
             </Link>
             {/* Links */}
             <ul>
-              <li>
-                <Link
-                  href="/about"
-                  className="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2"
-                  onClick={() => setMobileNavOpen(false)}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2"
-                  onClick={() => setMobileNavOpen(false)}
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/testimonials"
-                  className="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2"
-                  onClick={() => setMobileNavOpen(false)}
-                >
-                  Testimonials
-                </Link>
-              </li>
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="flex text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 py-2"
+                    onClick={() => setMobileNavOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
               <li className="py-2 my-2 border-t border-b border-gray-200 dark:border-gray-800">
                 <span className="flex text-gray-600 dark:text-gray-400 py-2">Resources</span>
                 <ul className="pl-4">
-                  <li>
-                    <Link
-                      href="/help"
-                      className="text-sm flex font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2"
-                      onClick={() => setMobileNavOpen(false)}
-                    >
-                      Help center
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/404"
-                      className="text-sm flex font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2"
-                      onClick={() => setMobileNavOpen(false)}
-                    >
-                      404
-                    </Link>
-                  </li>
+                  {resourceLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-sm flex font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2"
+                        onClick={() => setMobileNavOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </li>
               <li>
