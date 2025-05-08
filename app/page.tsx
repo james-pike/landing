@@ -8,13 +8,16 @@ import Hero from '@/components/hero-home'
 import Stats from '@/components/stats'
 import Carousel from '@/components/carousel'
 import Tabs from '@/components/tabs'
-import Process from '@/components/process'
-import PricingTables from '@/components/pricing-tables'
+
 import TestimonialsBlocks from '@/components/testimonials-blocks'
 import FeaturesBlocks from '@/components/features-blocks'
 import Cta from '@/components/cta'
+import BlogPostCarousel from '@/components/blog-post-carousel'
+import { getAllPosts } from '@/lib/api'
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getAllPosts()
+
   return (
     <>
       {/*  Page illustration */}
@@ -25,9 +28,9 @@ export default function Home() {
       <Stats />
       <Tabs />
       <Carousel />
-   
-      <Process />
-      <PricingTables />
+      <BlogPostCarousel posts={posts} />
+      {/* <Process />
+      <PricingTables /> */}
       <TestimonialsBlocks />
       <FeaturesBlocks />
       <Cta />
