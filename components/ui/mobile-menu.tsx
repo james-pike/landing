@@ -49,7 +49,7 @@ export default function MobileMenu() {
     <div className="inline-flex md:hidden">
 
       {/* Mobile lights switch */}
-      <ThemeToggle className="mr-6" />
+      {/* <ThemeToggle className="mr-6" /> */}
 
       {/* Hamburger button */}
       <button

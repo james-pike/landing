@@ -88,13 +88,13 @@ export default function Header() {
             </ul>
 
             {/* Desktop lights switch */}
-            <ThemeToggle className="ml-3" />
+            {/* <ThemeToggle className="ml-3" /> */}
 
             {/* Desktop CTA on the right */}
             <ul className="flex justify-end flex-wrap items-center">
               <li>
                 <Link href="/contact" className="btn-sm text-white bg-teal-500 hover:bg-teal-400 ml-6">
-                  Request code
+                  Get In Touch
                 </Link>
               </li>
             </ul>
