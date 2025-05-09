@@ -55,7 +55,7 @@ export default function FeaturesBlocks() {
           </div>
 
           <div className="max-w-3xl mx-auto">
-        <div className="space-y-1 px-4 pb-6">
+        <div className="space-y-1 px-0 pb-6">
           {faqs.map((faq, index) => (
             <Accordion
               key={index}

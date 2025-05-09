@@ -17,9 +17,10 @@ export default function Tabs() {
       name: 'Play',
       description: 'Expressive arts includes any and all creative modalities: visual arts, writing, tactile activities, storytelling, drama, music and movement, clowning, and puppetry.',
       image: PlayImage,
+      color: 'text-teal-500',
       icon: (
-        <svg className="w-6 h-6 shrink-0 mr-3" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-          <path className={`fill-current ${category === 'design' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M15.4.6c-.84-.8-2.16-.8-3 0L8.7 4.3c.73.252 1.388.68 1.916 1.244.469.515.83 1.119 1.065 1.775L15.4 3.6c.8-.84.8-2.16 0-3zM4.937 6.9c-1.2 1.2-1.4 5.7-1.4 5.7s4.4-.4 5.6-1.5a2.987 2.987 0 000-4.2 2.9 2.9 0 00-4.2 0z" />
+        <svg className="w-4 h-4 shrink-0 mr-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path className="fill-current" d="M15.4.6c-.84-.8-2.16-.8-3 0L8.7 4.3c.73.252 1.388.68 1.916 1.244.469.515.83 1.119 1.065 1.775L15.4 3.6c.8-.84.8-2.16 0-3zM4.937 6.9c-1.2 1.2-1.4 5.7-1.4 5.7s4.4-.4 5.6-1.5a2.987 2.987 0 000-4.2 2.9 2.9 0 00-4.2 0z" />
         </svg>
       ),
       content: {
@@ -28,7 +29,7 @@ export default function Tabs() {
         additionalContent: "Julia Cameron, author of The Artist's Way: A Spiritual Path to Higher Creativity, encourages a regular \"artist's date,\" and she views our creative self as akin to what therapists refer to as our \"inner child.\" Like any child, our creative self needs care and time to play and it needs nurturing. It's a simple thing, which all good parents learn from their children. Life is miserable when there isn't enough space to play. As adults, we have learned to put aside childish things, yet many of us still cherish our childhood toys. Play is serious business - watch any toddler and you will see this in action. Whether you're a parent, grandparent, or friend, taking time to play and be creative is essential for our wellbeing.",
         listItems: [
           'Visual Arts & Writing',
-          'Tactile Activities & Movement',
+          'Tactile Activities & Movement', 
           'Storytelling & Drama',
           'Music & Creative Play'
         ]
@@ -36,12 +37,13 @@ export default function Tabs() {
     },
     {
       id: 'development',
-      name: 'Walk', 
+      name: 'Walk',
       description: 'A labyrinth is a single winding path used to guild walking meditation, as it leads you from the outer edge to the centre on a circuitous path.',
       image: WalkImage,
+      color: 'text-purple-500',
       icon: (
-        <svg className="w-6 h-6 shrink-0 mr-3" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-          <path className={`fill-current ${category === 'development' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M5 16H4a4 4 0 01-4-4v-1h2v1a2 2 0 002 2h1v2zM13 10h-1.686l-1.207-1.207L14.37 4.63a2.121 2.121 0 00-3-3L7.207 5.793 5.99 4.576 5.98 3.02 3.038.079 0 3.117 3 6h1.586l1.207 1.207L4 9l3 3 1.793-1.793L10 11.414V13l3.01 3.01 2.98-2.979L13 10z" />
+        <svg className="w-4 h-4 shrink-0 mr-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path className="fill-current" d="M5 16H4a4 4 0 01-4-4v-1h2v1a2 2 0 002 2h1v2zM13 10h-1.686l-1.207-1.207L14.37 4.63a2.121 2.121 0 00-3-3L7.207 5.793 5.99 4.576 5.98 3.02 3.038.079 0 3.117 3 6h1.586l1.207 1.207L4 9l3 3 1.793-1.793L10 11.414V13l3.01 3.01 2.98-2.979L13 10z" />
         </svg>
       ),
       content: {
@@ -60,9 +62,10 @@ export default function Tabs() {
       name: 'Write',
       description: 'A labyrinth is a single winding path used to guild walking meditation, as it leads you from the outer edge to the centre on a circuitous path.',
       image: WriteImage,
+      color: 'text-blue-500',
       icon: (
-        <svg className="w-6 h-6 shrink-0 mr-3" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-          <path className={`fill-current ${category === 'branding' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M6 0H1a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V1a1 1 0 00-1-1zM5 5H2V2h3v3zM15 9h-5a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-5a1 1 0 00-1-1zm-1 5h-3v-3h3v3z" />
+        <svg className="w-4 h-4 shrink-0 mr-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path className="fill-current" d="M6 0H1a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V1a1 1 0 00-1-1zM5 5H2V2h3v3zM15 9h-5a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-5a1 1 0 00-1-1zm-1 5h-3v-3h3v3z" />
         </svg>
       ),
       content: {
@@ -81,9 +84,10 @@ export default function Tabs() {
       name: 'Sing',
       description: 'Express yourself through music and vocal performance.',
       image: SingImage,
+      color: 'text-pink-500',
       icon: (
-        <svg className="w-6 h-6 shrink-0 mr-3" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-          <path className={`fill-current ${category === 'singing' ? 'text-teal-200 dark:text-teal-400' : 'text-teal-500 dark:text-gray-400'}`} d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm1-6.4V3h-2v6l4 2.4L12 9l-3-1.4z" />
+        <svg className="w-4 h-4 shrink-0 mr-2" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path className="fill-current" d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm1-6.4V3h-2v6l4 2.4L12 9l-3-1.4z" />
         </svg>
       ),
       content: {
@@ -114,57 +118,65 @@ export default function Tabs() {
           </div>
 
           {/* Section content */}
-          <div className="flex flex-col lg:flex-row gap-12">
-            {/* Category buttons */}
-            <div className="lg:w-1/3">
-              <div className="flex flex-row lg:flex-col gap-2 lg:gap-4">
-                {tabs.map(tab => (
-                  <button
-                    key={tab.id}
-                    className={`flex-1 text-left p-4 lg:p-6 rounded-lg transition duration-150 ease-in-out ${category === tab.id ? 'bg-teal-500 hover:bg-teal-500 dark:bg-teal-600/25 dark:hover:bg-teal-600/25' : 'bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700'}`}
-                    onClick={() => setCategory(tab.id)}
-                  >
-                    <div className="flex items-center">
-                      {tab.icon}
-                      <span className={`text-lg lg:text-xl font-semibold ${category === tab.id ? 'text-white dark:text-teal-400' : 'text-gray-900 dark:text-gray-300'}`}>{tab.name}</span>
-                    </div>
-                    <p className={`text-sm mt-3 hidden lg:block ${category === tab.id ? 'text-teal-100 dark:text-teal-300' : 'text-gray-600 dark:text-gray-400'}`}>
-                      {tab.description}
-                    </p>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Content area */}
-            <div className="lg:w-2/3">
-              {tabs.map(tab => (
-                <div key={tab.id} className={category === tab.id ? 'block' : 'hidden'}>
-                  <div className="bg-white dark:bg-gray-800 rounded-lg p-0 px-4">
-                    <div className="relative w-full h-40 mb-6">
-                      <Image 
-                        className="rounded-lg object-cover" 
-                        src={tab.image} 
-                        fill
-                        style={{objectPosition: 'center'}}
-                        alt={`${tab.name} services`}
-                        priority={category === tab.id}
-                      />
-                    </div>
-                    <h3 className="text-2xl font-semibold mb-4 dark:text-white">{tab.content.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-4">{tab.content.description}</p>
-                    {tab.content.additionalContent && (
-                      <p className="text-gray-600 dark:text-gray-400 mb-4">{tab.content.additionalContent}</p>
-                    )}
-                    <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
-                      {tab.content.listItems.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
+          <div className="flex flex-wrap justify-center -m-1">
+            {tabs.map(tab => (
+              <button
+                key={tab.id}
+                className={`font-medium px-4 py-2 shadow transition duration-150 ease-in-out rounded-full inline-flex items-center justify-center m-1 ${
+                  category === tab.id
+                    ? tab.id === 'design' 
+                      ? 'bg-teal-500 hover:bg-teal-500 dark:bg-teal-600/25 dark:hover:bg-teal-600/25'
+                      : tab.id === 'development'
+                      ? 'bg-purple-500 hover:bg-purple-500 dark:bg-purple-600/25 dark:hover:bg-purple-600/25'
+                      : tab.id === 'branding'
+                      ? 'bg-blue-500 hover:bg-blue-500 dark:bg-blue-600/25 dark:hover:bg-blue-600/25'
+                      : 'bg-pink-500 hover:bg-pink-500 dark:bg-pink-600/25 dark:hover:bg-pink-600/25'
+                    : 'bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700'
+                }`}
+                onClick={() => setCategory(tab.id)}
+              >
+                <div className={category === tab.id ? 'text-white' : tab.color}>
+                  {tab.icon}
                 </div>
-              ))}
-            </div>
+                <span className={`transition duration-150 ease-in-out ${
+                  category === tab.id 
+                    ? 'text-white dark:text-teal-400'
+                    : 'text-gray-600 dark:text-gray-300'
+                }`}>
+                  {tab.name}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Content area */}
+          <div className="mt-8">
+            {tabs.map(tab => (
+              <div key={tab.id} className={category === tab.id ? 'block' : 'hidden'}>
+                <div className="bg-white dark:bg-gray-800 rounded-lg p-6">
+                  <div className="relative w-full h-40 mb-6">
+                    <Image 
+                      className="rounded-lg object-cover" 
+                      src={tab.image} 
+                      fill
+                      style={{objectPosition: 'center'}}
+                      alt={`${tab.name} services`}
+                      priority={category === tab.id}
+                    />
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-4 dark:text-white">{tab.content.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">{tab.content.description}</p>
+                  {tab.content.additionalContent && (
+                    <p className="text-gray-600 dark:text-gray-400 mb-4">{tab.content.additionalContent}</p>
+                  )}
+                  <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+                    {tab.content.listItems.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
 
         </div>
