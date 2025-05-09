@@ -16,7 +16,8 @@ export default function Carousel() {
       time: "2:00 PM - 5:00 PM",
       location: "Creative Arts Studio",
       description: "Join us for an afternoon of creative exploration through various art forms including painting, movement, and music.",
-      category: "Workshop"
+      category: "Workshop",
+      image: "/images/events.jpeg"
     },
     {
       title: "Walking Meditation Session",
@@ -24,7 +25,9 @@ export default function Carousel() {
       time: "9:00 AM - 10:30 AM",
       location: "Community Labyrinth",
       description: "Experience the peaceful practice of walking meditation in our beautiful outdoor labyrinth.",
-      category: "Meditation"
+      category: "Meditation",
+      image: "/images/events.jpeg"
+
     },
     {
       title: "Writing & Reflection Retreat",
@@ -32,7 +35,8 @@ export default function Carousel() {
       time: "10:00 AM - 4:00 PM", 
       location: "Peaceful Haven Center",
       description: "A full-day retreat combining mindful writing practices with guided reflection exercises.",
-      category: "Retreat"
+      category: "Retreat",
+      image: "/images/events.jpeg"
     },
     {
       title: "Group Singing Circle",
@@ -40,7 +44,8 @@ export default function Carousel() {
       time: "7:00 PM - 8:30 PM",
       location: "Music Room",
       description: "Come together in community to experience the joy and healing power of group singing.",
-      category: "Music"
+      category: "Music",
+      image: "/images/events.jpeg"
     },
     {
       title: "Art & Movement Workshop",
@@ -48,7 +53,8 @@ export default function Carousel() {
       time: "1:00 PM - 4:00 PM",
       location: "Dance Studio",
       description: "Explore the connection between visual arts and movement in this innovative workshop.",
-      category: "Workshop"
+      category: "Workshop",
+      image: "/images/events.jpeg"
     }
   ]
 
@@ -90,29 +96,38 @@ export default function Carousel() {
             {/* Carousel items */}
             {events.map((event, index) => (
               <div key={index} className="swiper-slide max-w-lg">
-                <div className="bg-white dark:bg-gray-800 rounded-lg p-6 h-full">
-                  <div className="mb-4">
-                    <span className="text-xs font-semibold text-teal-500 bg-teal-50 dark:bg-teal-500/10 rounded-full px-3 py-1">
-                      {event.category}
-                    </span>
+                <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden h-full">
+                  <div className="relative h-48">
+                    <img 
+                      src={event.image} 
+                      alt={event.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 dark:text-white">{event.title}</h3>
-                  <div className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                    <p>{event.date}</p>
-                    <p>{event.time}</p>
-                    <p>{event.location}</p>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 mb-6">{event.description}</p>
-                  <div className="flex justify-between items-center">
-                    <a className="inline-flex items-center text-teal-500 hover:text-teal-600 font-medium" href="#0">
-                      Learn more
-                      <svg className="w-3 h-3 fill-current ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z" />
-                      </svg>
-                    </a>
-                    <button className="btn-sm text-white bg-teal-500 hover:bg-teal-400">
-                      Register
-                    </button>
+                  <div className="p-6">
+                    <div className="mb-4">
+                      <span className="text-xs font-semibold text-teal-500 bg-teal-50 dark:bg-teal-500/10 rounded-full px-3 py-1">
+                        {event.category}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 dark:text-white">{event.title}</h3>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                      <p>{event.date}</p>
+                      <p>{event.time}</p>
+                      <p>{event.location}</p>
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-400 mb-6">{event.description}</p>
+                    <div className="flex justify-between items-center">
+                      <a className="inline-flex items-center text-teal-500 hover:text-teal-600 font-medium" href="#0">
+                        Learn more
+                        <svg className="w-3 h-3 fill-current ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z" />
+                        </svg>
+                      </a>
+                      <button className="btn-sm text-white bg-teal-500 hover:bg-teal-400">
+                        Register
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -122,7 +137,7 @@ export default function Carousel() {
 
         {/* Arrows */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex justify-end gap-2 mt-12 md:mt-16">
+          <div className="flex justify-end gap-2 mt-6 md:mt-16">
             <button className="carousel-prev relative z-20 w-12 h-12 p-1 box-content flex items-center justify-center group bg-teal-500 hover:bg-teal-400 dark:bg-gray-800 dark:hover:bg-teal-500/25 shadow-xl transition duration-150 ease-in-out">
               <span className="sr-only">Previous</span>
               <svg className="w-4 h-4 fill-current text-white dark:text-gray-400 group-hover:text-white dark:group-hover:text-teal-500 transition duration-150 ease-in-out" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">

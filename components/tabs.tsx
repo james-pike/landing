@@ -154,26 +154,32 @@ export default function Tabs() {
             {tabs.map(tab => (
               <div key={tab.id} className={category === tab.id ? 'block' : 'hidden'}>
                 <div className="bg-white dark:bg-gray-800 rounded-lg p-6">
-                  <div className="relative w-full h-40 mb-6">
-                    <Image 
-                      className="rounded-lg object-cover" 
-                      src={tab.image} 
-                      fill
-                      style={{objectPosition: 'center'}}
-                      alt={`${tab.name} services`}
-                      priority={category === tab.id}
-                    />
+                  <div className="md:flex">
+                    <div className="md:w-1/3 md:pr-6 mb-6 md:mb-0">
+                      <div className="relative w-full h-40 md:h-full">
+                        <Image 
+                          className="rounded-lg object-cover" 
+                          src={tab.image} 
+                          fill
+                          style={{objectPosition: 'center'}}
+                          alt={`${tab.name} services`}
+                          priority={category === tab.id}
+                        />
+                      </div>
+                    </div>
+                    <div className="md:w-2/3">
+                      <h3 className="text-2xl font-semibold mb-4 dark:text-white">{tab.content.title}</h3>
+                      <p className="text-gray-600 dark:text-gray-400 mb-4">{tab.content.description}</p>
+                      {tab.content.additionalContent && (
+                        <p className="text-gray-600 dark:text-gray-400 mb-4">{tab.content.additionalContent}</p>
+                      )}
+                      <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+                        {tab.content.listItems.map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-semibold mb-4 dark:text-white">{tab.content.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">{tab.content.description}</p>
-                  {tab.content.additionalContent && (
-                    <p className="text-gray-600 dark:text-gray-400 mb-4">{tab.content.additionalContent}</p>
-                  )}
-                  <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
-                    {tab.content.listItems.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
                 </div>
               </div>
             ))}
