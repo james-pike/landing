@@ -16,6 +16,7 @@ import Cta from '@/components/cta'
 import BlogPostCarousel from '@/components/blog-post-carousel'
 import { getAllPosts } from '@/lib/api'
 import Newsletter from '@/components/newsletter'
+import CtaContact from '@/components/cta-contact'
 
 export default async function Home() {
   const posts = await getAllPosts()
@@ -32,13 +33,17 @@ export default async function Home() {
       <Tabs />
       <Carousel />
       <BlogPostCarousel posts={posts} />
+      <div className="max-w-6xl mx-auto">
+      <Newsletter/>
+      </div>
       {/* <Process />
       <PricingTables /> */}
       <Carousel2/>
       <FeaturesBlocks />
       {/* <Cta /> */}
+   
       <div className="max-w-6xl mx-auto">
-      <Newsletter/>
+      <CtaContact/>
       </div>
     </>
   )

@@ -2,19 +2,55 @@
 
 import { useEffect } from 'react'
 
-import Image from 'next/image'
-import CarouselImage01 from '@/public/images/carousel-item-01.jpg'
-import CarouselImage02 from '@/public/images/carousel-item-02.jpg'
-import CarouselImage03 from '@/public/images/carousel-item-03.jpg'
-import CarouselImage04 from '@/public/images/carousel-item-04.jpg'
-import CarouselImage05 from '@/public/images/carousel-item-05.jpg'
-
 // Import Swiper
 import Swiper, { Autoplay, Navigation } from 'swiper'
 import 'swiper/swiper.min.css'
 Swiper.use([Autoplay, Navigation])
 
 export default function Carousel() {
+
+  const events = [
+    {
+      title: "Expressive Arts Workshop",
+      date: "September 15, 2023",
+      time: "2:00 PM - 5:00 PM",
+      location: "Creative Arts Studio",
+      description: "Join us for an afternoon of creative exploration through various art forms including painting, movement, and music.",
+      category: "Workshop"
+    },
+    {
+      title: "Walking Meditation Session",
+      date: "September 20, 2023", 
+      time: "9:00 AM - 10:30 AM",
+      location: "Community Labyrinth",
+      description: "Experience the peaceful practice of walking meditation in our beautiful outdoor labyrinth.",
+      category: "Meditation"
+    },
+    {
+      title: "Writing & Reflection Retreat",
+      date: "October 1, 2023",
+      time: "10:00 AM - 4:00 PM", 
+      location: "Peaceful Haven Center",
+      description: "A full-day retreat combining mindful writing practices with guided reflection exercises.",
+      category: "Retreat"
+    },
+    {
+      title: "Group Singing Circle",
+      date: "October 8, 2023",
+      time: "7:00 PM - 8:30 PM",
+      location: "Music Room",
+      description: "Come together in community to experience the joy and healing power of group singing.",
+      category: "Music"
+    },
+    {
+      title: "Art & Movement Workshop",
+      date: "October 15, 2023",
+      time: "1:00 PM - 4:00 PM",
+      location: "Dance Studio",
+      description: "Explore the connection between visual arts and movement in this innovative workshop.",
+      category: "Workshop"
+    }
+  ]
 
   useEffect(() => {
     const carousel = new Swiper('.carousel', {
@@ -42,72 +78,45 @@ export default function Carousel() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 font-red-hat-display mb-4">From rough design files, to powerful products</h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+            <h1 className="h2 font-red-hat-display mb-4">Events & Workshops</h1>
+            <p className="text-xl text-gray-600 dark:text-gray-400">Join us for transformative experiences in creativity, mindfulness, and personal growth.</p>
           </div>
 
         </div>
 
         {/* Carousel built with Swiper.js [https://swiperjs.com/] */}
-        {/* * Custom styles in src/css/additional-styles/theme.scss */}
         <div className="carousel swiper-container">
           <div className="swiper-wrapper">
             {/* Carousel items */}
-            <div className="swiper-slide max-w-lg">
-              <Image className="transition-opacity duration-300" src={CarouselImage01} width={540} height={460} alt="Carousel item 01" />
-              <div className="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
-                <div className="flex grow">
-                  <a className="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">Learn more</a>
-                </div>
-                <div className="absolute bottom-0 right-0 p-6">
-                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900/50 hover:bg-gray-900 transition duration-150 ease-in-out" href="#0">Creative Services</a>
-                </div>
-              </div>
-            </div>
-            <div className="swiper-slide max-w-lg">
-              <Image className="transition-opacity duration-300" src={CarouselImage02} width={540} height={460} alt="Carousel item 02" />
-              <div className="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
-                <div className="flex grow">
-                  <a className="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">Learn more</a>
-                </div>
-                <div className="absolute bottom-0 right-0 p-6">
-                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900/50 hover:bg-gray-900 transition duration-150 ease-in-out" href="#0">Creative Services</a>
-                </div>
-              </div>
-            </div>
-            <div className="swiper-slide max-w-lg">
-              <Image className="transition-opacity duration-300" src={CarouselImage03} width={540} height={460} alt="Carousel item 03" />
-              <div className="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
-                <div className="flex grow">
-                  <a className="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">Learn more</a>
-                </div>
-                <div className="absolute bottom-0 right-0 p-6">
-                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900/50 hover:bg-gray-900 transition duration-150 ease-in-out" href="#0">Creative Services</a>
+            {events.map((event, index) => (
+              <div key={index} className="swiper-slide max-w-lg">
+                <div className="bg-white dark:bg-gray-800 rounded-lg p-6 h-full">
+                  <div className="mb-4">
+                    <span className="text-xs font-semibold text-teal-500 bg-teal-50 dark:bg-teal-500/10 rounded-full px-3 py-1">
+                      {event.category}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 dark:text-white">{event.title}</h3>
+                  <div className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                    <p>{event.date}</p>
+                    <p>{event.time}</p>
+                    <p>{event.location}</p>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">{event.description}</p>
+                  <div className="flex justify-between items-center">
+                    <a className="inline-flex items-center text-teal-500 hover:text-teal-600 font-medium" href="#0">
+                      Learn more
+                      <svg className="w-3 h-3 fill-current ml-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.602 11l-.875-.864L9.33 6.534H0v-1.25h9.33L5.727 1.693l.875-.875 5.091 5.091z" />
+                      </svg>
+                    </a>
+                    <button className="btn-sm text-white bg-teal-500 hover:bg-teal-400">
+                      Register
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="swiper-slide max-w-lg">
-              <Image className="transition-opacity duration-300" src={CarouselImage04} width={540} height={460} alt="Carousel item 04" />
-              <div className="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
-                <div className="flex grow">
-                  <a className="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">Learn more</a>
-                </div>
-                <div className="absolute bottom-0 right-0 p-6">
-                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900/50 hover:bg-gray-900 transition duration-150 ease-in-out" href="#0">Creative Services</a>
-                </div>
-              </div>
-            </div>
-            <div className="swiper-slide max-w-lg">
-              <Image className="transition-opacity duration-300" src={CarouselImage05} width={540} height={460} alt="Carousel item 05" />
-              <div className="absolute inset-0 flex flex-col transition-opacity duration-300 translate-z-0">
-                <div className="flex grow">
-                  <a className="inline-flex btn-sm text-white bg-teal-500 hover:bg-teal-400 mx-auto self-center" href="#0">Learn more</a>
-                </div>
-                <div className="absolute bottom-0 right-0 p-6">
-                  <a className="text-xs font-medium text-center text-white py-2 px-3 rounded-full bg-gray-900/50 hover:bg-gray-900 transition duration-150 ease-in-out" href="#0">Creative Services</a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

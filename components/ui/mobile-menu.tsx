@@ -15,7 +15,8 @@ export default function MobileMenu() {
   const navLinks = [
     { href: '/about', label: 'About' },
     { href: '/blog', label: 'Blog' },
-    { href: '/testimonials', label: 'Testimonials' }
+    { href: '/testimonials', label: 'Testimonials' },
+    { href: '/contact', label: 'Get In Touch' }
   ]
 
   const resourceLinks = [

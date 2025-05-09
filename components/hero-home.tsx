@@ -1,6 +1,6 @@
 export default function HeroHome() {
   return (
-    <section className="md:h-screen">
+    <section className="md:h-screen pt-20">
       <div className="h-[300px] md:h-[50vh] relative">
         <div 
           className="absolute inset-0 bg-cover bg-center"
