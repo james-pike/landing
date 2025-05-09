@@ -19,7 +19,7 @@ export default function Contact() {
 
             {/* Page header */}
             <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-              <h1 className="h1 font-red-hat-display mb-4">Get started with Appy in seconds</h1>
+              <h1 className="h1 font-red-hat-display mb-4">Get In Touch</h1>
               <p className="text-xl text-gray-600 dark:text-gray-400">We'll send you a text with a link to download the app.</p>
             </div>
 
