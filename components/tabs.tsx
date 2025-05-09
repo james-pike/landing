@@ -108,11 +108,11 @@ export default function Tabs() {
       {/* Background gradient */}
       <div className="absolute inset-0 h-128 dark:opacity-25 bg-linear-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none" aria-hidden="true"></div>
       {/* End background gradient */}
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-6xl mx-auto px-2 sm:px-6">
         <div className="py-12 md:py-20">
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+          <div className="max-w-3xl mx-auto text-center px-2 pb-12 md:pb-16">
             <h2 className="h2 font-red-hat-display mb-4">My Creative Work</h2>
             <p className="text-xl text-gray-600 dark:text-gray-400"> I work within four main modalities : labyrinth/walking meditation, expressive arts & play, singing and writing. </p>
           </div>
