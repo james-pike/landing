@@ -109,7 +109,7 @@ export default async function SinglePost(
           </div>
         </div>
       </section>
-      <RelatedPosts />
+      {/* <RelatedPosts /> */}
     </>
   )
 }

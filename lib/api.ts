@@ -13,14 +13,14 @@ export interface Post {
 export async function getAllPosts(): Promise<Post[]> {
   return [
     {
-      title: "How to create a profile page using Appy",
-      slug: "how-to-create-a-profile-page-using-appy",
-      excerpt: "Learn how to create a professional profile page using Appy's powerful features and customization options.",
-      coverImage: "/images/news-01.jpg",
+      title: "Creative Clutter",
+      slug: "creative-clutter",
+      excerpt: "Some people wonder if expressive arts practitioners are actually hoarders in disguise.",
+      coverImage: "/images/blog1.jpg",
       date: "October 22, 2020",
       author: {
-        name: "Lisa Allison",
-        picture: "/images/news-author-03.jpg"
+        name: "Elspeth MacEwan",
+        picture: "/images/elspeth.png"
       }
     },
     {
@@ -30,8 +30,8 @@ export async function getAllPosts(): Promise<Post[]> {
       coverImage: "/images/news-02.jpg",
       date: "October 15, 2020",
       author: {
-        name: "Lisa Allison",
-        picture: "/images/news-author-03.jpg"
+        name: "Elspeth MacEwan",
+        picture: "/images/elspeth.png"
       }
     },
     {
@@ -41,8 +41,8 @@ export async function getAllPosts(): Promise<Post[]> {
       coverImage: "/images/news-03.jpg",
       date: "October 8, 2020",
       author: {
-        name: "Lisa Allison",
-        picture: "/images/news-author-03.jpg"
+        name: "Elspeth MacEwan",
+        picture: "/images/elspeth.png"
       }
     },
     {
@@ -52,8 +52,8 @@ export async function getAllPosts(): Promise<Post[]> {
       coverImage: "/images/news-04.jpg",
       date: "October 1, 2020",
       author: {
-        name: "Lisa Allison",
-        picture: "/images/news-author-03.jpg"
+        name: "Elspeth MacEwan",
+        picture: "/images/elspeth.png"
       }
     },
     {
@@ -63,8 +63,8 @@ export async function getAllPosts(): Promise<Post[]> {
       coverImage: "/images/news-05.jpg",
       date: "September 24, 2020",
       author: {
-        name: "Lisa Allison",
-        picture: "/images/news-author-03.jpg"
+        name: "Elspeth MacEwan",
+        picture: "/images/elspeth.png"
       }
     },
     {
@@ -74,8 +74,8 @@ export async function getAllPosts(): Promise<Post[]> {
       coverImage: "/images/news-06.jpg",
       date: "September 17, 2020",
       author: {
-        name: "Lisa Allison",
-        picture: "/images/news-author-03.jpg"
+        name: "Elspeth MacEwan",
+        picture: "/images/elspeth.png"
       }
     }
   ]

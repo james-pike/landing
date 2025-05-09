@@ -1,7 +1,7 @@
 export default function Newsletter() {
   return (
     <div className="dark bg-gray-800 py-8 px-8 md:py-12 md:px-12 text-center text-gray-100" data-aos="fade-down">
-      <div className="text-xl font-medium mb-6">Sign up to our newsletter for more articles like this.</div>
+      <div className="text-xl font-medium mb-6">Sign up to the Mourning Spring newsletter!</div>
       <form>
         <div className="relative flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-sm sm:px-4">
           <input type="email" className="form-input w-full px-4 py-2 mb-2 sm:mb-0 sm:mr-2" placeholder="Your email" aria-label="Your email" />

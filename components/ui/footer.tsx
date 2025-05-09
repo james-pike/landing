@@ -236,17 +236,17 @@ export default function Footer() {
 
             {/* Middle links */}
             <div className="text-sm md:order-1 text-gray-700 mb-2 md:mb-0">
-              <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="#0">
+              {/* <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="#0">
                 Terms
               </a>{' '}
               ·{' '}
               <a className="text-gray-600 dark:text-gray-400 hover:underline transition duration-150 ease-in-out" href="#0">
                 Privacy Policy
-              </a>
+              </a> */}
             </div>
 
             {/* Copyrights note */}
-            <div className="text-gray-600 dark:text-gray-400 text-sm mr-4">&copy; Cruip.com. All rights reserved.</div>
+            <div className="text-gray-600 dark:text-gray-400 text-sm mr-4">&copy; MourningSpring.com &nbsp;&nbsp;&nbsp;All rights reserved.</div>
           </div>
         </div>
       </div>
