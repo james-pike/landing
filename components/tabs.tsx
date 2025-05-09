@@ -108,7 +108,7 @@ export default function Tabs() {
       {/* Background gradient */}
       <div className="absolute inset-0 h-128 dark:opacity-25 bg-linear-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none" aria-hidden="true"></div>
       {/* End background gradient */}
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-6xl mx-auto px-2 sm:px-6">
         <div className="py-12 md:py-20">
 
           {/* Section header */}
@@ -122,7 +122,7 @@ export default function Tabs() {
             {tabs.map(tab => (
               <button
                 key={tab.id}
-                className={`font-medium px-2 py-2 shadow transition duration-150 ease-in-out rounded-full inline-flex items-center justify-center m-1 ${
+                className={`font-medium px-4 py-2 shadow transition duration-150 ease-in-out rounded-full inline-flex items-center justify-center m-1 ${
                   category === tab.id
                     ? tab.id === 'design' 
                       ? 'bg-teal-500 hover:bg-teal-500 dark:bg-teal-600/25 dark:hover:bg-teal-600/25'
