@@ -15,7 +15,7 @@ export default function Tabs() {
     {
       id: 'design',
       name: 'Play',
-      description: 'Expressive arts includes all creative modalities that you can think of : visual arts, clay, music, gingerbread, sand play, pipe cleaners, fabric or yarn, storytelling, drama, movement, etc.',
+      description: 'Expressive arts includes any and all creative modalities: visual arts, writing, tactile activities, storytelling, drama, music and movement, clowning, and puppetry.',
       image: PlayImage,
       icon: (
         <svg className="w-6 h-6 shrink-0 mr-3" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -23,13 +23,14 @@ export default function Tabs() {
         </svg>
       ),
       content: {
-        title: 'Expressive Arts',
-        description: 'Expressive arts includes all creative modalities that you can think of : visual arts, clay, music, gingerbread, sand play, pipe cleaners, fabric or yarn, storytelling, drama, movement, etc.',
+        title: 'Expressive Arts & Play',
+        description: 'The most wonderful course I ever joined was an Expressive Arts certificate program at a community college in Haliburton, Ontario. I completed the Graduate Certificate Program there in 2016. Bringing expressive arts into my psychotherapy work was probably the most powerful way that I could help facilitate healing, my own and those under my care. In psychiatry, the focus is too often on deficiencies and mental pathology, where what is needed are avenues for healing.',
+        additionalContent: "Julia Cameron, author of The Artist's Way: A Spiritual Path to Higher Creativity, encourages a regular \"artist's date,\" and she views our creative self as akin to what therapists refer to as our \"inner child.\" Like any child, our creative self needs care and time to play and it needs nurturing. It's a simple thing, which all good parents learn from their children. Life is miserable when there isn't enough space to play. As adults, we have learned to put aside childish things, yet many of us still cherish our childhood toys. Play is serious business - watch any toddler and you will see this in action. Whether you're a parent, grandparent, or friend, taking time to play and be creative is essential for our wellbeing.",
         listItems: [
-          'Visual Arts',
-          'Music & Movement',
+          'Visual Arts & Writing',
+          'Tactile Activities & Movement',
           'Storytelling & Drama',
-          'Creative Play'
+          'Music & Creative Play'
         ]
       }
     },
@@ -152,6 +153,9 @@ export default function Tabs() {
                     </div>
                     <h3 className="text-2xl font-semibold mb-4 dark:text-white">{tab.content.title}</h3>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">{tab.content.description}</p>
+                    {tab.content.additionalContent && (
+                      <p className="text-gray-600 dark:text-gray-400 mb-4">{tab.content.additionalContent}</p>
+                    )}
                     <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
                       {tab.content.listItems.map((item, i) => (
                         <li key={i}>{item}</li>

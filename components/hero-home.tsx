@@ -5,7 +5,7 @@ export default function HeroHome() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/mockup-image-01.jpg')"
+            backgroundImage: "url('/images/hero2.jpeg')"
           }}
         >
           <div className="absolute inset-0 flex items-center justify-center">
@@ -21,7 +21,7 @@ export default function HeroHome() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/mockup-image-01.jpg')"
+            backgroundImage: "url('/images/hero.png')"
           }}
         >
           <div className="absolute inset-0 flex items-center justify-center">
