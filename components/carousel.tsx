@@ -77,7 +77,7 @@ export default function Carousel() {
   }, [])
 
   return (
-    <section className="border-t border-transparent dark:border-gray-800">
+    <section className="border-t border-transparent bg-gray-100 dark:border-gray-800">
       <div className="py-12 md:py-20">
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6">

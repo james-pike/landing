@@ -104,7 +104,7 @@ export default function Tabs() {
   ]
 
   return (
-    <section className="relative border-t border-transparent dark:border-gray-800">
+    <section className="relative border-t border-transparent bg-white dark:border-gray-800">
       {/* Background gradient */}
       <div className="absolute inset-0 h-128 dark:opacity-25 bg-linear-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 pointer-events-none" aria-hidden="true"></div>
       {/* End background gradient */}

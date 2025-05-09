@@ -64,10 +64,10 @@ export default function TestimonialsCarousel() {
 
   return (
     <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 bg-gray-100 sm:px-6">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-          <h1 className="h2 font-red-hat-display mb-4 mt-16">Testimonials</h1>
+          <h1 className="h2 font-red-hat-display mb-4 pt-16">Testimonials</h1>
           <p className="text-xl text-gray-600 dark:text-gray-400">Hear what Mourning Spring members have to say.</p>
         </div>
 
@@ -80,7 +80,7 @@ export default function TestimonialsCarousel() {
             <div className="relative" data-aos="fade-down">
 
               {/* Testimonials */}
-              <div className="relative flex flex-col items-start z-10 transition-all duration-300 ease-in-out" ref={testimonials}>
+              <div className="relative flex flex-col items-start bg-white z-10 transition-all duration-300 ease-in-out" ref={testimonials}>
 
                 {items.map((item, index) => (
                   <Transition
