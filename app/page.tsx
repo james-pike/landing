@@ -28,7 +28,7 @@ export default async function Home() {
         <PageIllustration />
       </div>
       <Hero />
-      <Stats />
+      {/* <Stats /> */}
       <Tabs />
       <Carousel />
       <BlogPostCarousel posts={posts} />
